@@ -8,7 +8,8 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "ethers": "^6.13.5",
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "tsconfig-paths": "^4.2.0"
   },
   "devDependencies": {
     "@types/express": "^5.0.0",
@@ -17,7 +18,20 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.7.3"
   },
+  "nodemonConfig": {
+    "ignore": [
+      "**/*.test.ts",
+      "**/*.spec.ts",
+      ".git",
+      "node_modules"
+    ],
+    "watch": [
+      "src"
+    ],
+    "exec": "node -r tsconfig-paths/register -r ts-node/register ./src/app.ts",
+    "ext": "ts, js"
+  },
   "scripts": {
-    "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/app.ts"
+    "start": "nodemon"
   }
 }

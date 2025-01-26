@@ -3,6 +3,6 @@ import { Router } from "express";
 
 const authRoute = Router();
 
-authRoute.get("nonce", getNonce)
+authRoute.get("/nonce", getNonce)
 
 export default authRoute
