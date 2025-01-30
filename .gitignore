@@ -1,4 +1,4 @@
 node_modules/
 
 # JWT keys
-.keys
+.keys/

@@ -25,10 +25,10 @@ const AuthController = {
         res.status(200).json({ msg: "Authorized", token: token, success: true })
     },
 
-    // getJWTPublicKey: (req: Request, res: Response) => {
-    //     const pubKey = AuthService.getPublicKey()
-    //     res.status(200).json({ msg: pubKey, success: true })
-    // }
+    getJWTPublicKey: (req: Request, res: Response) => {
+        const pubKey = AuthService.getPublicKey()
+        res.status(200).json({ msg: pubKey, success: true })
+    }
 }
 
 export default AuthController;
