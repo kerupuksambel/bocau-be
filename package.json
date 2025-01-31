@@ -35,6 +35,6 @@
     "ext": "ts, js"
   },
   "scripts": {
-    "start": "nodemon"
+    "dev": "nodemon"
   }
 }

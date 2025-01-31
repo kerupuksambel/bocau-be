@@ -24,7 +24,7 @@ const AuthService = {
     generateToken: (address: string) => {
         const payload = {
             address: address,
-            exp: Math.floor(Date.now() / 1000) + 5, // Token expires in 5 sec
+            exp: Math.floor(Date.now() / 1000) + 60 * 60, // Token expires in 1 hour
         }
 
         return jwt.sign(payload, PRIV_KEY, {algorithm: "RS256"})
